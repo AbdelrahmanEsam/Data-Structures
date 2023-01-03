@@ -1,12 +1,12 @@
-class Tree
+class BinaryTree
 {
-    var root : Node? = null
+    var root : BinaryNode? = null
 
-     val queue = LinkedList<Node>()
+     val queue = LinkedList<BinaryNode>()
 
     fun insertValue(value: Any)
     {
-        val node = Node(value)
+        val node = BinaryNode(value)
         if (root == null)
         {
             root = node
@@ -29,5 +29,5 @@ class Tree
         }
     }
 
-    data class Node(val value:Any, var left : Node? = null, var right: Node? = null)
+    data class BinaryNode(val value:Any, var left : Node? = null, var right: Node? = null)
 }
