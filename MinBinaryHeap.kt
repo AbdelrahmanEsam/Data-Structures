@@ -11,10 +11,10 @@ class MinBinaryHeap<T : Comparable<T>> : BinaryTree<T>() {
 
     private fun siftUp(index: Int) {
         var currentIndex = index
-        while (currentIndex > 0 && nodes[currentIndex] < nodes[getParentIndex(index)]) {
+        while (currentIndex > 0 && nodes[currentIndex] < nodes[getParentIndex(currentIndex)]) {
             nodes[currentIndex] =
-                nodes[getParentIndex(index)].also { nodes[getParentIndex(index)] = nodes[currentIndex] }
-            currentIndex = getParentIndex(index)
+                nodes[getParentIndex(currentIndex)].also { nodes[getParentIndex(currentIndex)] = nodes[currentIndex] }
+            currentIndex = getParentIndex(currentIndex)
         }
     }
 
